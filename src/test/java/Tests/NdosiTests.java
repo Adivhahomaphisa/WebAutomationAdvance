@@ -1,5 +1,6 @@
 package Tests;
 
+import Pages.LearningMaterialPage;
 import Pages.LoginPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -25,6 +26,10 @@ public class NdosiTests extends Base{
     @Test(dependsOnMethods = "enterPasswordId")
     public void ClickLoginTests(){
         loginPage.clickLogin();
+    }
+    @Test(dependsOnMethods = "ClickLoginTests")
+    public void verifyWelcomeHeadingTests(){
+        learningMaterialPage.verifyHeading();
     }
     @AfterTest
     public void closeBrowser(){

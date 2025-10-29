@@ -31,6 +31,10 @@ public class NdosiTests extends Base{
     public void verifyWelcomeHeadingTests(){
         learningMaterialPage.verifyHeading();
     }
+    @Test(dependsOnMethods = "verifyWelcomeHeadingTests")
+    public void ClickWebAutomationAdvanceTab() {
+        learningMaterialPage.ClickWebAutomationAdvanceTab();
+    }
     @AfterTest
     public void closeBrowser(){
 //        driver.quit();

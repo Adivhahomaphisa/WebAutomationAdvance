@@ -15,6 +15,9 @@ public class LearningMaterialPage {
     @FindBy(id = "practice-heading")
     WebElement WelcomeHeading_id;
 
+    @FindBy(id = "tab-btn-web")
+    WebElement WebAutomationAdvanceTab_id;
+
     public LearningMaterialPage(WebDriver driver){
         this.driver = driver;
     }
@@ -22,4 +25,6 @@ public class LearningMaterialPage {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(WelcomeHeading_id));
         WelcomeHeading_id.isDisplayed();
     }
+    public void ClickWebAutomationAdvanceTab(){
+       WebAutomationAdvanceTab_id.click();}
 }

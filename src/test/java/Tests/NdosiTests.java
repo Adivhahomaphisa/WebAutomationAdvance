@@ -2,6 +2,7 @@ package Tests;
 
 import Pages.LearningMaterialPage;
 import Pages.LoginPage;
+import Pages.WebAutomationAdvancePage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
@@ -34,6 +35,18 @@ public class NdosiTests extends Base{
     @Test(dependsOnMethods = "verifyWelcomeHeadingTests")
     public void ClickWebAutomationAdvanceTab() {
         learningMaterialPage.ClickWebAutomationAdvanceTab();
+    }
+    @Test(dependsOnMethods = "ClickWebAutomationAdvanceTab")
+    public void verifyTheInventoryHeaderIsDisplayedTests(){
+        webAutomationAdvancePage.verifyTheInventoryHeaderIsDisplayed();
+    }
+    @Test(dependsOnMethods = "verifyTheInventoryHeaderIsDisplayedTests")
+    public void SelectDeviceTypeTests(){
+        webAutomationAdvancePage.SelectDeviceType("Phone");
+    }
+    @Test(dependsOnMethods = "SelectDeviceTypeTests")
+    public void SelectBrandNameTests(){
+        webAutomationAdvancePage.SelectBrandName("Apple");
     }
     @AfterTest
     public void closeBrowser(){

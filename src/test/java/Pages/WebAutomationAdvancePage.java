@@ -1,5 +1,6 @@
 package Pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +22,20 @@ public class WebAutomationAdvancePage {
     @FindBy(id = "brand")
     WebElement BrandName_id;
 
+    @FindBy(id = "storage-128GB")
+    WebElement Storage_id;
+
+    @FindBy(id = "color")
+    WebElement SelectColour_id;
+
+    @FindBy(id = "quantity")
+    WebElement SelectQuantity_id;
+
+    @FindBy(id = "address")
+    WebElement EnterDeliveryAddress_id;
+
+    @FindBy(id = "inventory-next-btn")
+    WebElement ClickNextButton_id;
 
     public WebAutomationAdvancePage(WebDriver driver){
         this.driver=driver;
@@ -36,6 +51,25 @@ public class WebAutomationAdvancePage {
     public void SelectBrandName(String BrandName){
         new WebDriverWait(driver ,Duration.ofSeconds(10)).until(visibilityOf(BrandName_id));
         BrandName_id.sendKeys(BrandName);
-
     }
+    public void SelectStorage(String Storage){
+        new WebDriverWait(driver ,Duration.ofSeconds(10)).until(visibilityOf(Storage_id));
+        Storage_id.sendKeys(Storage);
+    }
+    public void SelectColour(String Colour){
+        new WebDriverWait(driver , Duration.ofSeconds(10)).until(visibilityOf(SelectColour_id));
+        SelectColour_id.sendKeys(Colour);
+    }
+    public void SelectQuantity(String Quantity){
+        new WebDriverWait(driver , Duration.ofSeconds(10)).until(visibilityOf(SelectQuantity_id));
+        SelectQuantity_id.sendKeys(Keys.CLEAR,Quantity);
+    }
+    public void EnterDeliveryAddress(String EnterAddress){
+        EnterDeliveryAddress_id.sendKeys(EnterAddress);
+    }
+    public void ClickNextButton(){
+        ClickNextButton_id.click();
+    }
+
+
 }

@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/Administrator/Documents/Ndosi Automation Testing/webAutomationAdvance"><classes><class name="Tests.NdosiTests"><methods><include name="verifyHomepageIsDisplayedTests"/><include name="ClickLearningMaterialTests"/><include name="EnterLoginEmailTests"/><include name="enterPasswordId"/><include name="ClickLoginTests"/><include name="verifyWelcomeHeadingTests"/></methods></class><class name="Utils.BrowserFactory"><methods><include name="test"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Ndosi Tests">
+        <classes>
+            <class name="Tests.NdosiTests"><methods>
+                <include name="verifyHomepageIsDisplayedTests"/>
+                <include name="ClickLearningMaterialTests"/>
+                <include name="EnterLoginEmailTests"/>
+                <include name="enterPasswordId"/>
+                <include name="ClickLoginTests"/>
+                <include name="verifyWelcomeHeadingTests"/>
+            </methods></class>
+            <class name="Utils.BrowserFactory">
+                <methods>
+                    <include name="test"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

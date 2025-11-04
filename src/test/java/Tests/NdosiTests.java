@@ -42,31 +42,32 @@ public class NdosiTests extends Base{
         webAutomationAdvancePage.verifyTheInventoryHeaderIsDisplayed();
     }
     @Test(dependsOnMethods = "verifyTheInventoryHeaderIsDisplayedTests")
-    public void SelectDeviceTypeTests(){
+    public void SelectDeviceTypeTests()throws InterruptedException{
         webAutomationAdvancePage.SelectDeviceType("Phone");
     }
     @Test(dependsOnMethods = "SelectDeviceTypeTests")
-    public void SelectBrandNameTests(){
+    public void SelectBrandNameTests()throws InterruptedException{
         webAutomationAdvancePage.SelectBrandName("Apple");
     }
     @Test(dependsOnMethods ="SelectBrandNameTests" )
-    public void SelectStorageTests(){
+    public void SelectStorageTests()throws InterruptedException{
         webAutomationAdvancePage.SelectStorage("128GB");
     }
     @Test(dependsOnMethods = "SelectStorageTests")
-    public void SelectColourTests(){
+    public void SelectColourTests() throws InterruptedException{
         webAutomationAdvancePage.SelectColour("Blue");
     }
     @Test(dependsOnMethods = "SelectColourTests")
-    public void SelectQuantityTests(){
+    public void SelectQuantityTests()throws InterruptedException{
         webAutomationAdvancePage.SelectQuantity("2");
     }
     @Test(dependsOnMethods = "SelectQuantityTests")
-    public void EnterDeliveryAddress(){
+    public void EnterDeliveryAddress()throws InterruptedException{
         webAutomationAdvancePage.EnterDeliveryAddress("166 Sefago street");
     }
     @Test(dependsOnMethods = "EnterDeliveryAddress")
-    public void ClickNextButton(){
+    public void ClickNextButton()throws InterruptedException{
+
         webAutomationAdvancePage.ClickNextButton();
     }
 

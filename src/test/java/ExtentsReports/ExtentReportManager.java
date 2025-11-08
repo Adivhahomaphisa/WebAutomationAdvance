@@ -25,7 +25,7 @@ public class ExtentReportManager {
         extentReports.setSystemInfo("OS",System.getProperty("OS.name"));
         extentReports.setSystemInfo("Exwcution Machine",System.getProperty("User.name"));
 
-        return null;
+        return extentReports;
     }
    // @Test
     //public void (){
